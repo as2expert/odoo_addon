@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: Install & test (Odoo 17)
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U odoo"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sanity check (Python + XML well-formed)
+        run: |
+          python3 -m compileall -q as2expert_connector
+          python3 - <<'PY'
+          import glob, xml.dom.minidom
+          for f in glob.glob("as2expert_connector/**/*.xml", recursive=True):
+              xml.dom.minidom.parse(f)
+              print("ok", f)
+          PY
+
+      - name: Install the addon and run its tests
+        run: |
+          docker run --rm --network host \
+            -v "${{ github.workspace }}:/mnt/extra-addons:ro" \
+            odoo:17.0 \
+            odoo -d test_db \
+              --db_host=localhost --db_port=5432 \
+              --db_user=odoo --db_password=odoo \
+              -i as2expert_connector \
+              --test-enable --test-tags=/as2expert_connector \
+              --stop-after-init --no-http \
+              --log-level=test --logfile=/dev/stdout
