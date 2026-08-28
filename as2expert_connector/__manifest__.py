@@ -23,9 +23,11 @@ the documented REST API.
 """,
     "author": "AS2Expert",
     "website": "https://www.as2expert.com",
+    "support": "contact@as2expert.com",
     "category": "Inventory/EDI",
     "license": "LGPL-3",
     "depends": ["base", "mail"],
+    "external_dependencies": {"python": ["requests"]},
     "data": [
         "security/as2expert_security.xml",
         "security/ir.model.access.csv",
@@ -35,6 +37,7 @@ the documented REST API.
         "views/as2expert_message_views.xml",
         "views/as2expert_menus.xml",
     ],
+    "images": ["static/description/icon.png"],
     "application": True,
     "installable": True,
 }

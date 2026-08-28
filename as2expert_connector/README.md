@@ -99,10 +99,21 @@ accounts. Adjust the interval there.
 | Download content   | `/messages/download` |
 | Send               | `/messages/send`     |
 
+## Tests
+
+Unit tests (with `requests` mocked, no live API needed) live in `tests/`:
+
+```
+odoo-bin -d <db> -i as2expert_connector --test-enable --stop-after-init
+```
+
 ## Limitations
 
 - Transport only — no EDI parsing/validation in Odoo.
 - Field names read from API responses tolerate both English and legacy keys
   (`file_name`/`asunto`, `content_b64`/`contenido_base64`, …); if your tenant
   returns different keys, adjust `_import_inbound` / `action_sync_partners`.
-- Not yet published on the Odoo App Store; install manually.
+
+## License
+
+[LGPL-3](LICENSE). Contributions welcome — open an issue or PR on GitHub.
