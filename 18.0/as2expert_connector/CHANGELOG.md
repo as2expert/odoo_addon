@@ -1,5 +1,11 @@
 # Changelog
 
+## 18.0.1.0.3
+
+- Store listing: real UI screenshots in the description page.
+- Fix: message display name now stores correctly (`_compute_name` gained its
+  `@api.depends`), so records no longer show as "Unnamed".
+
 ## 18.0.1.0.2
 
 - Backend styling: app icon, brand header with SVG logo, coloured state and

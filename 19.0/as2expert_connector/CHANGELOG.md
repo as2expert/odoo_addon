@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.0.1.0.1
+
+- Store listing: real UI screenshots in the description page.
+- Fix: message display name now stores correctly (`_compute_name` gained its
+  `@api.depends`), so records no longer show as "Unnamed".
+
 ## 19.0.1.0.0
 
 Port to Odoo 19 (same feature set as 18.0).
