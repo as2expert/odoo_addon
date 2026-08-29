@@ -4,7 +4,7 @@
         <field name="name">as2expert.account.form</field>
         <field name="model">as2expert.account</field>
         <field name="arch" type="xml">
-            <form>
+            <form class="o_as2expert_form">
                 <header>
                     <button name="action_test_connection" type="object"
                             string="Test connection" class="btn-primary"/>
@@ -25,6 +25,15 @@
                     </div>
                     <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
                             invisible="active"/>
+                    <div class="o_as2expert_header">
+                        <img class="o_as2expert_logo"
+                             src="/as2expert_connector/static/src/img/as2_logo.svg"
+                             alt="AS2Expert"/>
+                        <div class="o_as2expert_brand">
+                            <span class="o_as2expert_name">AS2Expert account</span>
+                            <span class="o_as2expert_tag">Managed AS2 mailbox</span>
+                        </div>
+                    </div>
                     <div class="oe_title">
                         <label for="name"/>
                         <h1><field name="name" placeholder="e.g. Production AS2"/></h1>
@@ -42,7 +51,7 @@
                             <field name="poll_limit"/>
                         </group>
                     </group>
-                    <group string="Webhook">
+                    <group string="Webhook" class="o_as2expert_webhook">
                         <field name="webhook_url" readonly="1"/>
                         <field name="webhook_secret" password="True"/>
                         <button name="action_regenerate_webhook_token" type="object"
