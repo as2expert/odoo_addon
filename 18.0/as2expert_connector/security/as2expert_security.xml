@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_as2expert" model="ir.module.category">
+        <field name="name">AS2Expert</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="group_as2expert_user" model="res.groups">
+        <field name="name">AS2 User</field>
+        <field name="category_id" ref="module_category_as2expert"/>
+        <field name="comment">Send and receive AS2 messages and browse the log.</field>
+    </record>
+
+    <record id="group_as2expert_manager" model="res.groups">
+        <field name="name">AS2 Administrator</field>
+        <field name="category_id" ref="module_category_as2expert"/>
+        <field name="implied_ids" eval="[(4, ref('group_as2expert_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        <field name="comment">Manage AS2Expert accounts, tokens and webhooks.</field>
+    </record>
+</odoo>

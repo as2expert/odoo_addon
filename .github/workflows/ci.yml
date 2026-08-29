@@ -6,8 +6,13 @@ on:
 
 jobs:
   test:
-    name: Install & test (Odoo 17)
+    name: Install & test
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ["17.0", "18.0"]
 
     services:
       postgres:
@@ -29,10 +34,10 @@ jobs:
 
       - name: Sanity check (Python + XML well-formed)
         run: |
-          python3 -m compileall -q as2expert_connector
-          python3 - <<'PY'
-          import glob, xml.dom.minidom
-          for f in glob.glob("as2expert_connector/**/*.xml", recursive=True):
+          python3 -m compileall -q "${{ matrix.version }}/as2expert_connector"
+          python3 - "${{ matrix.version }}" <<'PY'
+          import glob, sys, xml.dom.minidom
+          for f in glob.glob(f"{sys.argv[1]}/as2expert_connector/**/*.xml", recursive=True):
               xml.dom.minidom.parse(f)
               print("ok", f)
           PY
@@ -40,8 +45,8 @@ jobs:
       - name: Install the addon and run its tests
         run: |
           docker run --rm --network host \
-            -v "${{ github.workspace }}:/mnt/extra-addons:ro" \
-            odoo:17.0 \
+            -v "${{ github.workspace }}/${{ matrix.version }}:/mnt/extra-addons:ro" \
+            "odoo:${{ matrix.version }}" \
             odoo -d test_db \
               --db_host=localhost --db_port=5432 \
               --db_user=odoo --db_password=odoo \

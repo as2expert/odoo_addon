@@ -1,12 +1,20 @@
 # AS2Expert Odoo Connector
 
-[![Odoo](https://img.shields.io/badge/Odoo-17.0-875A7B)](https://www.odoo.com)
+[![Odoo](https://img.shields.io/badge/Odoo-17.0%20%7C%2018.0-875A7B)](https://www.odoo.com)
 [![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue)](LICENSE)
 
 Send and receive files over **AS2** straight from Odoo — no AS2 server to run,
-no certificates to babysit. This repository holds a single Odoo 17 addon,
-[`as2expert_connector`](as2expert_connector), that turns Odoo into a generic AS2
-mailbox backed by the [AS2Expert](https://www.as2expert.com) cloud platform.
+no certificates to babysit. This repository holds the `as2expert_connector`
+addon, which turns Odoo into a generic AS2 mailbox backed by the
+[AS2Expert](https://www.as2expert.com) cloud platform.
+
+The addon is kept **one folder per Odoo version** so each release stays pinned
+and easy to track:
+
+| Odoo | Folder |
+|------|--------|
+| 18.0 | [`18.0/as2expert_connector`](18.0/as2expert_connector) |
+| 17.0 | [`17.0/as2expert_connector`](17.0/as2expert_connector) |
 
 AS2Expert does the hard part — signing, encryption, MDNs, certificate management
 and partner connectivity. Odoo only exchanges **files** through the documented
@@ -32,15 +40,17 @@ keep your document mapping wherever it already lives.
 
 ## Requirements
 
-- Odoo **17.0** (Community or Enterprise)
+- Odoo **17.0** or **18.0** (Community or Enterprise)
 - An AS2Expert account with an API token
 - Python `requests` (bundled with Odoo)
 
 ## Install
 
+Pick the folder that matches your Odoo version, e.g. for Odoo 18:
+
 ```bash
 # copy (or symlink) the addon into an Odoo addons path
-cp -r as2expert_connector /path/to/odoo/addons/
+cp -r 18.0/as2expert_connector /path/to/odoo/addons/
 ```
 
 Restart Odoo, **Update Apps List** (developer mode), then install
@@ -55,15 +65,20 @@ Restart Odoo, **Update Apps List** (developer mode), then install
    Optionally set a **Webhook secret** on both sides for HMAC verification.
 
 Full details, including the send flow and the scheduled poll, are in the
-[addon README](as2expert_connector/README.md).
+addon README ([18.0](18.0/as2expert_connector/README.md) ·
+[17.0](17.0/as2expert_connector/README.md)).
 
 ## Tests
 
-Unit tests mock `requests`, so no live API is needed:
+Unit tests mock `requests`, so no live API is needed. Point the addons path at
+the version folder, e.g.:
 
 ```bash
-odoo-bin -d <db> -i as2expert_connector --test-enable --stop-after-init
+odoo-bin --addons-path=18.0 -d <db> -i as2expert_connector \
+  --test-enable --stop-after-init
 ```
+
+CI runs the suite against both 17.0 and 18.0 on every push.
 
 ## Contributing
 
