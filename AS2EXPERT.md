@@ -1,115 +1,115 @@
 # AS2EXPERT
 
-**Intercambio B2B de nivel empresarial, sin la infraestructura de nivel empresarial.**
+**Enterprise-grade B2B exchange, without the enterprise-grade infrastructure.**
 
-AS2EXPERT es una plataforma cloud para el intercambio seguro de documentos entre
-empresas. Firma, cifra, transporta y acusa recibo de cada mensaje siguiendo los
-estándares que exigen las grandes cadenas de distribución, la industria y la
-logística —AS2 y EDIFACT— pero elimina el coste, la fragilidad y la carga
-operativa de montar y mantener ese stack por tu cuenta.
+AS2EXPERT is a cloud platform for the secure exchange of business documents
+between companies. It signs, encrypts, transports and acknowledges every message
+using the standards large retail chains, manufacturers and logistics operators
+demand — AS2 and EDIFACT — while removing the cost, fragility and operational
+burden of building and running that stack yourself.
 
-Donde antes hacían falta un servidor AS2, certificados que renovar, un experto en
-EDI y semanas de puesta en marcha por cada socio, AS2EXPERT reduce todo a una
-consola clara y una API documentada.
-
----
-
-## El problema que resuelve
-
-Conectarse con un partner por AS2 debería ser trivial. En la práctica no lo es:
-
-- **El protocolo es exigente.** Firma digital, cifrado, MDN síncronos y
-  asíncronos, verificación del MIC, políticas distintas por socio. Un detalle mal
-  configurado y el mensaje se rechaza sin explicación clara.
-- **Los certificados caducan.** Y cuando lo hacen, el flujo se detiene —a menudo
-  en silencio, hasta que alguien reclama la factura o el pedido que no llegó.
-- **EDIFACT es un mundo.** Decenas de directorios UNECE, envolturas UNB/UNH,
-  mensajes ORDERS, DESADV, INVOIC, CONTRL… cada cliente con su matiz.
-- **Cada integración se paga dos veces:** una al construirla y otra, cada mes, en
-  mantenerla viva.
-
-El resultado habitual es un sistema crítico que nadie quiere tocar y que solo una
-persona entiende. AS2EXPERT existe para que ese riesgo deje de ser tuyo.
+Where you used to need an AS2 server, certificates to renew, an EDI specialist
+and weeks of onboarding per partner, AS2EXPERT reduces it all to a clear console
+and a documented API.
 
 ---
 
-## Qué obtienes
+## The problem it solves
 
-### Un motor AS2 gestionado, listo para producción
-Firma y cifrado extremo a extremo, MDN **síncronos y asíncronos**, control del
-MIC y **política por socio**. Tú defines con quién hablas; la plataforma se ocupa
-del handshake criptográfico, del acuse de recibo y de la trazabilidad de cada
-mensaje. Sin servidor AS2 que operar, sin puertos que abrir en tu red.
+Connecting to a partner over AS2 should be trivial. In practice it isn't:
 
-### Certificados sin sobresaltos
-La gestión de certificados —alta, rotación, vigencia— vive dentro de la
-plataforma. El objetivo es simple: que un certificado a punto de caducar nunca
-sea la causa de que un pedido se pierda.
+- **The protocol is demanding.** Digital signatures, encryption, synchronous and
+  asynchronous MDNs, MIC verification, a different policy per partner. One
+  detail misconfigured and the message is rejected with no clear explanation.
+- **Certificates expire.** And when they do, the flow stops — often silently,
+  until someone chases the invoice or the order that never arrived.
+- **EDIFACT is a world of its own.** Dozens of UNECE directories, UNB/UNH
+  envelopes, ORDERS, DESADV, INVOIC, CONTRL messages… each customer with its own
+  quirk.
+- **Every integration is paid for twice:** once to build it, and again — every
+  month — to keep it alive.
 
-### EDIFACT como herramienta de primera clase
-Más que un transporte: AS2EXPERT **entiende** el documento. Analiza envolturas
-UNB/UNH, reconoce los directorios UNECE y te da una lectura clara de ORDERS,
-DESADV, INVOIC o CONTRL directamente desde el mensaje recibido. El EDI deja de
-ser una caja negra y pasa a ser algo que puedes inspeccionar y auditar.
-
-### Dos vías de integración, un mismo resultado
-- **API REST** con autenticación por token: estaciones, socios, certificados,
-  envío y descarga de mensajes, todo desde tu propio software.
-- **SFTP nativo** para los flujos por carpeta de siempre.
-- **Webhooks** para reaccionar en tiempo real a cada mensaje entrante.
-
-Elige la que encaja con cada partner sin cambiar de plataforma.
-
-### Conectores para tu ERP
-El transporte se acerca a donde ya trabajas. El **conector de Odoo** —de código
-abierto— convierte tu ERP en un buzón AS2: enviar un fichero es adjuntarlo y
-pulsar un botón; recibirlo, encontrarlo ya en tu bandeja. La lógica pesada se
-queda en la plataforma; tu ERP solo intercambia ficheros.
+The usual outcome is a business-critical system nobody wants to touch and only
+one person understands. AS2EXPERT exists so that risk stops being yours.
 
 ---
 
-## Por qué AS2EXPERT
+## What you get
 
-**Time-to-partner en horas, no en semanas.** Dar de alta un socio es
-configuración, no un proyecto. La complejidad del protocolo está resuelta de
-fábrica.
+### A managed, production-ready AS2 engine
+End-to-end signing and encryption, **synchronous and asynchronous** MDNs, MIC
+control and **per-partner policy**. You define who you talk to; the platform
+handles the cryptographic handshake, the acknowledgement and the traceability of
+every message. No AS2 server to operate, no ports to open in your network.
 
-**Coste total predecible.** Sin servidores que dimensionar, sin licencias de
-middleware EDI, sin la partida oculta de mantenimiento que se lleva cada mes un
-trozo del presupuesto de IT.
+### Certificates without surprises
+Certificate management — issuance, rotation, expiry — lives inside the platform.
+The goal is simple: an expiring certificate should never be the reason an order
+is lost.
 
-**Robusto por diseño.** La entrada de mensajes combina webhook en tiempo real con
-un sondeo de respaldo: si un aviso se pierde, el mensaje llega igual. La API es la
-fuente de verdad; el webhook, un acelerador.
+### EDIFACT as a first-class tool
+More than transport: AS2EXPERT **understands** the document. It parses UNB/UNH
+envelopes, recognises the UNECE directories and gives you a clear reading of
+ORDERS, DESADV, INVOIC or CONTRL straight from the received message. EDI stops
+being a black box and becomes something you can inspect and audit.
 
-**Seguro de serie.** Cifrado y firma en cada mensaje, tokens revocables,
-verificación de firma en los webhooks. La seguridad no es una opción que haya que
-acordarse de activar.
+### Two integration paths, one outcome
+- **REST API** with token authentication: stations, partners, certificates,
+  message send and download — all from your own software.
+- **Native SFTP** for the classic folder-based flows.
+- **Webhooks** to react to every inbound message in real time.
 
-**Abierto donde importa.** API documentada, webhooks estándar y conectores de
-código abierto: no quedas atrapado: integras a tu manera.
+Pick whichever fits each partner without switching platforms.
 
-**Sin lock-in operativo.** Tú mantienes tus mapeos y tu lógica de negocio donde
-ya viven. AS2EXPERT se ocupa del transporte, el protocolo y el cumplimiento —no
-de secuestrar tus procesos.
-
----
-
-## Para quién
-
-- **Proveedores** que necesitan conectarse con la cadena de distribución sin
-  montar una plataforma EDI propia.
-- **Equipos de IT y logística** que quieren dejar de ser el sostén frágil de un
-  servidor AS2 heredado.
-- **Software y ERPs** que quieren ofrecer AS2/EDIFACT a sus clientes con una
-  simple llamada a una API.
+### Connectors for your ERP
+Transport comes to where you already work. The **Odoo connector** — open
+source — turns your ERP into an AS2 mailbox: sending a file is attaching it and
+pressing a button; receiving one, finding it already in your inbox. The heavy
+logic stays on the platform; your ERP only exchanges files.
 
 ---
 
-## En una frase
+## Why AS2EXPERT
 
-AS2EXPERT convierte un requisito técnico intimidante —"tienes que conectarte por
-AS2 y hablar EDIFACT"— en algo que se resuelve con una cuenta, un token y una
-tarde de trabajo.
+**Time-to-partner in hours, not weeks.** Onboarding a partner is configuration,
+not a project. The complexity of the protocol is solved out of the box.
 
-> **AS2EXPERT** · Intercambio B2B seguro, sin fricción · [www.as2expert.com](https://www.as2expert.com)
+**Predictable total cost.** No servers to size, no EDI middleware licences, none
+of the hidden maintenance line that quietly eats a slice of the IT budget every
+month.
+
+**Robust by design.** Inbound delivery combines a real-time webhook with a
+polling fallback: if a notification is lost, the message still arrives. The API
+is the source of truth; the webhook is an accelerator.
+
+**Secure by default.** Encryption and signing on every message, revocable
+tokens, signature verification on webhooks. Security isn't an option you have to
+remember to switch on.
+
+**Open where it matters.** Documented API, standard webhooks and open-source
+connectors: you're never locked in — you integrate your way.
+
+**No operational lock-in.** You keep your mappings and your business logic where
+they already live. AS2EXPERT handles transport, protocol and compliance — not
+hijacking your processes.
+
+---
+
+## Who it's for
+
+- **Suppliers** who need to connect to the retail supply chain without building
+  their own EDI platform.
+- **IT and logistics teams** who want to stop being the fragile prop under a
+  legacy AS2 server.
+- **Software vendors and ERPs** who want to offer AS2/EDIFACT to their customers
+  with a single API call.
+
+---
+
+## In one sentence
+
+AS2EXPERT turns an intimidating technical requirement — "you have to connect over
+AS2 and speak EDIFACT" — into something you solve with an account, a token and an
+afternoon's work.
+
+> **AS2EXPERT** · Secure, frictionless B2B exchange · [www.as2expert.com](https://www.as2expert.com)
