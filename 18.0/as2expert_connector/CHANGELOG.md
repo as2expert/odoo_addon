@@ -1,5 +1,10 @@
 # Changelog
 
+## 18.0.1.0.5
+
+- Screenshots now listed in the manifest `images` so they show in the Apps
+  Store image gallery, not only inside the description body.
+
 ## 18.0.1.0.4
 
 - Fix garbled symbols in the description page: emoji replaced with inline SVG
