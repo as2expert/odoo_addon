@@ -1,5 +1,10 @@
 # Changelog
 
+## 18.0.1.0.1
+
+- Inbound poll now imports only inbound messages (`incoming`/`entrante`);
+  the `/messages` endpoint returns both directions.
+
 ## 18.0.1.0.0
 
 Port to Odoo 18.
