@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_as2expert_message_user,as2expert.message.user,model_as2expert_message,group_as2expert_user,1,1,1,0
+access_as2expert_message_manager,as2expert.message.manager,model_as2expert_message,group_as2expert_manager,1,1,1,1
+access_as2expert_partner_user,as2expert.partner.user,model_as2expert_partner,group_as2expert_user,1,0,0,0
+access_as2expert_partner_manager,as2expert.partner.manager,model_as2expert_partner,group_as2expert_manager,1,1,1,1
+access_as2expert_account_user,as2expert.account.user,model_as2expert_account,group_as2expert_user,1,0,0,0
+access_as2expert_account_manager,as2expert.account.manager,model_as2expert_account,group_as2expert_manager,1,1,1,1
