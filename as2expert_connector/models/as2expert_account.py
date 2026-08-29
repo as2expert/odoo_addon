@@ -206,6 +206,9 @@ class As2expertAccount(models.Model):
                 api_id = str(item.get("id") or "")
                 if not api_id:
                     continue
+                # /messages returns both directions; only import inbound ones.
+                if not (item.get("incoming") or item.get("entrante")):
+                    continue
                 if Message.search_count(
                     [("account_id", "=", account.id), ("message_id_api", "=", api_id)]
                 ):
