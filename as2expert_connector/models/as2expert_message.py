@@ -1,4 +1,4 @@
-from odoo import _, fields, models
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -47,6 +47,7 @@ class As2expertMessage(models.Model):
         ),
     ]
 
+    @api.depends("subject", "filename", "message_ref")
     def _compute_name(self):
         for message in self:
             label = message.subject or message.filename or _("AS2 message")
