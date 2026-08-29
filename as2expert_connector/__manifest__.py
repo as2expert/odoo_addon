@@ -1,6 +1,6 @@
 {
     "name": "AS2Expert Connector",
-    "version": "17.0.1.0.4",
+    "version": "17.0.1.0.5",
     "summary": "Send and receive files over AS2 through AS2Expert's REST API and webhooks",
     "description": """
 AS2Expert Connector
@@ -37,7 +37,11 @@ the documented REST API.
         "views/as2expert_message_views.xml",
         "views/as2expert_menus.xml",
     ],
-    "images": ["static/description/icon.png"],
+    "images": [
+        "static/description/sc_messages.png",
+        "static/description/sc_account.png",
+        "static/description/sc_message.png",
+    ],
     "assets": {
         "web.assets_backend": [
             "as2expert_connector/static/src/scss/as2expert.scss",
