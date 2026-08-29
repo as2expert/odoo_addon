@@ -1,4 +1,4 @@
-# AS2Expert Connector (Odoo 17)
+# AS2Expert Connector (Odoo 18)
 
 Send and receive files over **AS2** from inside Odoo, using the
 [AS2Expert](https://www.as2expert.com) cloud platform. Odoo never runs an AS2
@@ -22,7 +22,7 @@ EDI mapping, or with AS2Expert's built-in EDIFACT tooling.
 
 ## Requirements
 
-- Odoo **17.0**.
+- Odoo **18.0**.
 - Python `requests` (bundled with Odoo).
 - An AS2Expert account with an API token (AS2Expert console → API tokens).
 
