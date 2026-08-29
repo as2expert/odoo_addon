@@ -1,6 +1,6 @@
 {
     "name": "AS2Expert Connector",
-    "version": "18.0.1.0.5",
+    "version": "18.0.1.0.6",
     "summary": "Send and receive files over AS2 through AS2Expert's REST API and webhooks",
     "description": """
 AS2Expert Connector
@@ -24,6 +24,8 @@ the documented REST API.
     "author": "AS2Expert",
     "website": "https://www.as2expert.com",
     "support": "contact@as2expert.com",
+    "maintainers": ["as2expert"],
+    "development_status": "Production/Stable",
     "category": "Inventory/EDI",
     "license": "LGPL-3",
     "depends": ["base", "mail"],
@@ -38,6 +40,7 @@ the documented REST API.
         "views/as2expert_menus.xml",
     ],
     "images": [
+        "static/description/banner.png",
         "static/description/sc_messages.png",
         "static/description/sc_account.png",
         "static/description/sc_message.png",
