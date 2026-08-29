@@ -1,0 +1,427 @@
+# Spanish translation of the AS2Expert Connector Odoo module.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: as2expert_connector\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid ""
+"<span class=\"o_as2expert_name\">AS2Expert account</span>\n"
+"                            <span class=\"o_as2expert_tag\">Managed AS2 mailbox</span>"
+msgstr "<span class=\"o_as2expert_name\">Cuenta AS2Expert</span>\n                            <span class=\"o_as2expert_tag\">Buzón AS2 gestionado</span>"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "API"
+msgstr "API"
+
+#. module: as2expert_connector
+#: model:res.groups,name:as2expert_connector.group_as2expert_manager
+msgid "AS2 Administrator"
+msgstr "Administrador AS2"
+
+#. module: as2expert_connector
+#: model:ir.model,name:as2expert_connector.model_as2expert_message
+msgid "AS2 Message"
+msgstr "Mensaje AS2"
+
+#. module: as2expert_connector
+#: model:ir.actions.act_window,name:as2expert_connector.action_as2expert_message
+msgid "AS2 Messages"
+msgstr "Mensajes AS2"
+
+#. module: as2expert_connector
+#: model:ir.actions.act_window,name:as2expert_connector.action_as2expert_partner
+msgid "AS2 Partners"
+msgstr "Socios AS2"
+
+#. module: as2expert_connector
+#: model:res.groups,name:as2expert_connector.group_as2expert_user
+msgid "AS2 User"
+msgstr "Usuario AS2"
+
+#. module: as2expert_connector
+#: model:ir.module.category,name:as2expert_connector.module_category_as2expert
+#: model:ir.ui.menu,name:as2expert_connector.menu_as2expert_root
+#: model:res.groups.privilege,name:as2expert_connector.privilege_as2expert
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "AS2Expert"
+msgstr "AS2Expert"
+
+#. module: as2expert_connector
+#: model:ir.model,name:as2expert_connector.model_as2expert_account
+msgid "AS2Expert Account"
+msgstr "Cuenta AS2Expert"
+
+#. module: as2expert_connector
+#: model:ir.actions.act_window,name:as2expert_connector.action_as2expert_account
+msgid "AS2Expert Accounts"
+msgstr "Cuentas AS2Expert"
+
+#. module: as2expert_connector
+#: model:ir.model,name:as2expert_connector.model_as2expert_partner
+msgid "AS2Expert Partner"
+msgstr "Socio AS2Expert"
+
+#. module: as2expert_connector
+#: model:ir.actions.server,name:as2expert_connector.ir_cron_as2expert_poll_ir_actions_server
+msgid "AS2Expert: poll inbound messages"
+msgstr "AS2Expert: sondear mensajes entrantes"
+
+#. module: as2expert_connector
+#: model:ir.ui.menu,name:as2expert_connector.menu_as2expert_accounts
+msgid "Accounts"
+msgstr "Cuentas"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: as2expert_connector
+#: model_terms:ir.actions.act_window,help:as2expert_connector.action_as2expert_message
+msgid ""
+"Attach a file, pick a partner, and send it over AS2 through AS2Expert.\n"
+"               Received messages appear here automatically."
+msgstr "Adjunta un fichero, elige un socio y envíalo por AS2 a través de AS2Expert.\n               Los mensajes recibidos aparecen aquí automáticamente."
+
+#. module: as2expert_connector
+#: model:ir.ui.menu,name:as2expert_connector.menu_as2expert_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_search
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__direction
+msgid "Direction"
+msgstr "Dirección"
+
+#. module: as2expert_connector
+#: model:ir.model.fields.selection,name:as2expert_connector.selection__as2expert_message__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_form
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__error
+msgid "Error"
+msgstr "Error"
+
+#. module: as2expert_connector
+#: model:ir.model.fields.selection,name:as2expert_connector.selection__as2expert_message__state__failed
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_search
+msgid "Failed"
+msgstr "Fallido"
+
+#. module: as2expert_connector
+#: model:ir.model.fields.selection,name:as2expert_connector.selection__as2expert_message__direction__inbound
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_search
+msgid "Inbound"
+msgstr "Entrante"
+
+#. module: as2expert_connector
+#: model:res.groups,comment:as2expert_connector.group_as2expert_manager
+msgid "Manage AS2Expert accounts, tokens and webhooks."
+msgstr "Gestionar cuentas, tokens y webhooks de AS2Expert."
+
+#. module: as2expert_connector
+#: model:ir.ui.menu,name:as2expert_connector.menu_as2expert_messages
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_search
+#: model:ir.model.fields.selection,name:as2expert_connector.selection__as2expert_message__direction__outbound
+msgid "Outbound"
+msgstr "Saliente"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_search
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__partner_id
+msgid "Partner"
+msgstr "Socio"
+
+#. module: as2expert_connector
+#: model:ir.ui.menu,name:as2expert_connector.menu_as2expert_partners
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Partners"
+msgstr "Socios"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Poll inbound now"
+msgstr "Sondear entrantes ahora"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Polling"
+msgstr "Sondeo"
+
+#. module: as2expert_connector
+#: model:ir.model.fields.selection,name:as2expert_connector.selection__as2expert_message__state__received
+msgid "Received"
+msgstr "Recibido"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Regenerate webhook URL"
+msgstr "Regenerar URL del webhook"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid ""
+"Register the webhook URL above against your partner in the\n"
+"                            AS2Expert console. Inbound messages are also picked up by a\n"
+"                            scheduled poll, so the webhook is an accelerator, not a\n"
+"                            single point of failure."
+msgstr "Registra la URL del webhook de arriba en tu socio en la\n                            consola de AS2Expert. Los mensajes entrantes también se recogen\n                            mediante un sondeo programado, así que el webhook es un acelerador,\n                            no un único punto de fallo."
+
+#. module: as2expert_connector
+#: model:res.groups,comment:as2expert_connector.group_as2expert_user
+msgid "Send and receive AS2 messages and browse the log."
+msgstr "Enviar y recibir mensajes AS2 y consultar el registro."
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_form
+msgid "Send over AS2"
+msgstr "Enviar por AS2"
+
+#. module: as2expert_connector
+#: model_terms:ir.actions.act_window,help:as2expert_connector.action_as2expert_message
+msgid "Send your first AS2 message"
+msgstr "Envía tu primer mensaje AS2"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_message_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Sync partners"
+msgstr "Sincronizar socios"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Test connection"
+msgstr "Probar conexión"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "Webhook"
+msgstr "Webhook"
+
+#. module: as2expert_connector
+#: model_terms:ir.ui.view,arch_db:as2expert_connector.view_as2expert_account_form
+msgid "e.g. Production AS2"
+msgstr "p. ej. AS2 Producción"
+
+#. module: as2expert_connector
+#: model:ir.model.fields.selection,name:as2expert_connector.selection__as2expert_message__state__sent
+msgid "Sent"
+msgstr "Enviado"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__name
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__name
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_partner__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__account_id
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_partner__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__state
+msgid "State"
+msgstr "Estado"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__subject
+msgid "Subject"
+msgstr "Asunto"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__sent_at
+msgid "Sent At"
+msgstr "Enviado el"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__received_at
+msgid "Received At"
+msgstr "Recibido el"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__timeout
+msgid "Timeout"
+msgstr "Tiempo de espera"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__base_url
+msgid "API base URL"
+msgstr "URL base de la API"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_account__base_url
+msgid "AS2Expert REST API base, e.g. https://b2b.as2expert.com/api/v1"
+msgstr "Base de la API REST de AS2Expert, p. ej. https://b2b.as2expert.com/api/v1"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__token
+msgid "API token"
+msgstr "Token de API"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_account__token
+msgid "Bearer token issued from the AS2Expert console. Stored server-side."
+msgstr "Token Bearer emitido desde la consola de AS2Expert. Se almacena en el servidor."
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_account__timeout
+msgid "HTTP timeout per request, in seconds."
+msgstr "Tiempo de espera HTTP por petición, en segundos."
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__station_ref
+msgid "Station id"
+msgstr "ID de estación"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_account__station_ref
+msgid "Optional AS2Expert station id to scope message polling to one station."
+msgstr "ID de estación AS2Expert opcional para limitar el sondeo de mensajes a una estación."
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__inbound_folder
+msgid "Inbound folder"
+msgstr "Carpeta de entrada"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__poll_limit
+msgid "Poll batch size"
+msgstr "Tamaño de lote de sondeo"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_account__poll_limit
+msgid "Maximum inbound messages fetched per poll."
+msgstr "Máximo de mensajes entrantes obtenidos por sondeo."
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__webhook_token
+msgid "Webhook token"
+msgstr "Token del webhook"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__webhook_secret
+msgid "Webhook secret"
+msgstr "Secreto del webhook"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_account__webhook_url
+msgid "Webhook URL"
+msgstr "URL del webhook"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_account__webhook_url
+msgid "Register this URL as the partner webhook in AS2Expert."
+msgstr "Registra esta URL como webhook del socio en AS2Expert."
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__filename
+msgid "File name"
+msgstr "Nombre de fichero"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__file
+msgid "File"
+msgstr "Fichero"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__message_ref
+msgid "AS2 Message-ID"
+msgstr "ID de mensaje AS2"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_message__message_id_api
+msgid "API message id"
+msgstr "ID de mensaje de la API"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_partner__partner_ref
+msgid "Partner id"
+msgstr "ID de socio"
+
+#. module: as2expert_connector
+#: model:ir.model.fields,help:as2expert_connector.field_as2expert_partner__partner_ref
+msgid "The partner id used by the AS2Expert API (/messages/send 'partner')."
+msgstr "El ID de socio que usa la API de AS2Expert (/messages/send 'partner')."
+
+#. module: as2expert_connector
+#: model:ir.model.fields,field_description:as2expert_connector.field_as2expert_partner__as2_id
+msgid "AS2 ID"
+msgstr "AS2 ID"
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_message.py:0
+msgid "AS2 message"
+msgstr "mensaje AS2"
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_message.py:0
+msgid "Only outbound messages can be sent."
+msgstr "Solo se pueden enviar mensajes salientes."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_message.py:0
+msgid "Select a partner before sending."
+msgstr "Selecciona un socio antes de enviar."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_message.py:0
+msgid "Attach a file before sending."
+msgstr "Adjunta un fichero antes de enviar."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "No API token configured for account '%s'."
+msgstr "No hay token de API configurado para la cuenta '%s'."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "AS2Expert API connection error: %s"
+msgstr "Error de conexión con la API de AS2Expert: %s"
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "AS2Expert API rejected the token (HTTP 401)."
+msgstr "La API de AS2Expert rechazó el token (HTTP 401)."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "AS2Expert API: the token lacks the required scope (HTTP 403)."
+msgstr "API de AS2Expert: el token no tiene el permiso necesario (HTTP 403)."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "AS2Expert API returned a non-JSON response (HTTP %s)."
+msgstr "La API de AS2Expert devolvió una respuesta no JSON (HTTP %s)."
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "AS2Expert API error: %s"
+msgstr "Error de la API de AS2Expert: %s"
+
+#. module: as2expert_connector
+#: code:addons/as2expert_connector/models/as2expert_account.py:0
+msgid "Connection OK. %s station(s) visible to this token."
+msgstr "Conexión correcta. %s estación(es) visibles para este token."
