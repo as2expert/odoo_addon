@@ -44,7 +44,11 @@ jobs:
 
       - name: Install the addon and run its tests
         run: |
+          # The odoo image entrypoint waits for PostgreSQL using the HOST/PORT/
+          # USER/PASSWORD env vars (default HOST=db), so they must be set in
+          # addition to odoo's own --db_* flags, or it fails to resolve "db".
           docker run --rm --network host \
+            -e HOST=localhost -e PORT=5432 -e USER=odoo -e PASSWORD=odoo \
             -v "${{ github.workspace }}/${{ matrix.version }}:/mnt/extra-addons:ro" \
             "odoo:${{ matrix.version }}" \
             odoo -d test_db \
