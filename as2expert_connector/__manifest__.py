@@ -1,6 +1,6 @@
 {
     "name": "AS2Expert Connector",
-    "version": "17.0.1.0.3",
+    "version": "17.0.1.0.4",
     "summary": "Send and receive files over AS2 through AS2Expert's REST API and webhooks",
     "description": """
 AS2Expert Connector
