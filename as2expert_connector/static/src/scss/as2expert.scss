@@ -1,0 +1,62 @@
+// AS2Expert Connector — light branding for the backend views.
+// Colours are kept accessible on both light and dark backends by leaning on
+// Odoo's own text variable and a single accent (cyan) that works on both.
+
+$as2-navy: #0f172a;
+$as2-cyan: #38bdf8;
+$as2-cyan-soft: #7dd3fc;
+
+.o_as2expert_header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+
+    .o_as2expert_logo {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+    }
+
+    .o_as2expert_brand {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+
+        .o_as2expert_name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-color, #{$as2-navy});
+        }
+        .o_as2expert_tag {
+            font-size: 0.75rem;
+            color: var(--muted-color, #64748b);
+        }
+    }
+}
+
+// A thin accent rule under the form header buttons.
+.o_as2expert_form .o_form_sheet_bg {
+    border-top: 3px solid $as2-cyan;
+}
+
+// Direction pill in the message list/form.
+.o_as2expert_dir {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+
+    &.o_dir_out { color: $as2-cyan; }
+    &.o_dir_in { color: $as2-cyan-soft; }
+}
+
+// Give the webhook block a soft, readable panel.
+.o_as2expert_webhook {
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    padding: 8px 12px;
+}

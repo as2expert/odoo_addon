@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="menu_as2expert_root" name="AS2Expert" sequence="90"/>
+    <menuitem id="menu_as2expert_root" name="AS2Expert" sequence="90"
+              web_icon="as2expert_connector,static/description/icon.png"/>
 
     <menuitem id="menu_as2expert_messages" name="Messages"
               parent="menu_as2expert_root"

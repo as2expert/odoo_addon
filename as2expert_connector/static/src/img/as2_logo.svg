@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AS2Expert">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0f172a"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5">
+    <path d="M15 26 H41" stroke="#38bdf8"/>
+    <path d="M37 20 L46 26 L37 32" stroke="#38bdf8"/>
+    <path d="M49 40 H23" stroke="#7dd3fc"/>
+    <path d="M27 34 L18 40 L27 46" stroke="#7dd3fc"/>
+  </g>
+</svg>
