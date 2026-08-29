@@ -1,5 +1,10 @@
 # Changelog
 
+## 19.0.1.0.5
+
+- Redesigned the store banner (cleaner layout: logo tile, title, tagline and
+  feature chips) rendered crisply instead of the flat placeholder.
+
 ## 19.0.1.0.4
 
 - Spanish translation (`i18n/es.po`).
