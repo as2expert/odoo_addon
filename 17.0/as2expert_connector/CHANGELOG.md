@@ -1,5 +1,10 @@
 # Changelog
 
+## 17.0.1.0.4
+
+- Fix garbled symbols in the description page: emoji replaced with inline SVG
+  icons, and em dash / middle dot replaced with HTML entities (ASCII-only).
+
 ## 17.0.1.0.3
 
 - Store listing: real UI screenshots in the description page.
