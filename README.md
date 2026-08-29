@@ -1,7 +1,7 @@
 # AS2Expert Odoo Connector
 
 [![Odoo](https://img.shields.io/badge/Odoo-17.0-875A7B)](https://www.odoo.com)
-[![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue)](as2expert_connector/LICENSE)
+[![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue)](LICENSE)
 
 Send and receive files over **AS2** straight from Odoo — no AS2 server to run,
 no certificates to babysit. This repository holds a single Odoo 17 addon,
@@ -13,6 +13,9 @@ and partner connectivity. Odoo only exchanges **files** through the documented
 REST API and reacts to webhooks. The addon is deliberately **transport-generic**:
 it moves EDIFACT, X12, XML, PDF or any payload and does not parse content, so you
 keep your document mapping wherever it already lives.
+
+> New to the platform? Read [**AS2EXPERT.md**](AS2EXPERT.md) for a short overview
+> of what AS2Expert is and why it exists.
 
 ## Features
 
@@ -69,4 +72,4 @@ Issues and pull requests are welcome. Please keep the addon transport-generic
 
 ## License
 
-[LGPL-3](as2expert_connector/LICENSE).
+[LGPL-3](LICENSE).
