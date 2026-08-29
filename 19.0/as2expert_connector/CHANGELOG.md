@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.0.1.0.4
+
+- Spanish translation (`i18n/es.po`).
+- Store polish: brand banner as the first gallery image, screenshots taken
+  with a neutral host, and `development_status`/`maintainers` metadata.
+
 ## 19.0.1.0.3
 
 - Screenshots now listed in the manifest `images` so they show in the Apps
