@@ -1,5 +1,10 @@
 # Changelog
 
+## 18.0.1.0.2
+
+- Backend styling: app icon, brand header with SVG logo, coloured state and
+  direction badges in the message list, and a light SCSS asset bundle.
+
 ## 18.0.1.0.1
 
 - Inbound poll now imports only inbound messages (`incoming`/`entrante`);

@@ -4,15 +4,19 @@
         <field name="name">as2expert.message.tree</field>
         <field name="model">as2expert.message</field>
         <field name="arch" type="xml">
-            <list decoration-success="state == 'sent' or state == 'received'"
-                  decoration-danger="state == 'failed'" decoration-muted="state == 'draft'">
+            <list decoration-danger="state == 'failed'" decoration-muted="state == 'draft'">
                 <field name="create_date"/>
-                <field name="direction"/>
+                <field name="direction" widget="badge"
+                       decoration-primary="direction == 'outbound'"
+                       decoration-info="direction == 'inbound'"/>
                 <field name="partner_id"/>
                 <field name="subject"/>
                 <field name="filename"/>
                 <field name="message_ref"/>
-                <field name="state"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'sent' or state == 'received'"
+                       decoration-danger="state == 'failed'"
+                       decoration-muted="state == 'draft'"/>
                 <field name="account_id"/>
             </list>
         </field>
@@ -22,7 +26,7 @@
         <field name="name">as2expert.message.form</field>
         <field name="model">as2expert.message</field>
         <field name="arch" type="xml">
-            <form>
+            <form class="o_as2expert_form">
                 <header>
                     <button name="action_send" type="object" string="Send over AS2"
                             class="btn-primary"
