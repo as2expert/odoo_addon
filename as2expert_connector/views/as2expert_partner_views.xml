@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_as2expert_partner_tree" model="ir.ui.view">
+        <field name="name">as2expert.partner.tree</field>
+        <field name="model">as2expert.partner</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="as2_id"/>
+                <field name="partner_ref"/>
+                <field name="account_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_as2expert_partner_form" model="ir.ui.view">
+        <field name="name">as2expert.partner.form</field>
+        <field name="model">as2expert.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="as2_id"/>
+                        <field name="partner_ref"/>
+                        <field name="account_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_as2expert_partner" model="ir.actions.act_window">
+        <field name="name">AS2 Partners</field>
+        <field name="res_model">as2expert.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
