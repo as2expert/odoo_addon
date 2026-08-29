@@ -1,0 +1,22 @@
+# Changelog
+
+## 19.0.1.0.0
+
+Port to Odoo 19 (same feature set as 18.0).
+
+Odoo 19 specifics handled here:
+
+- Security groups use the new `res.groups.privilege` model (Odoo 19 dropped
+  `res.groups.category_id`) and `user_ids` instead of `users`.
+- Search view group-by filters are direct children of `<search>` (Odoo 19
+  removed the `expand` attribute on the `<group>` wrapper).
+
+Carried over from 18.0:
+
+- List views (`<list>`), `<chatter/>` element and `_compute_display_name`.
+- Backend styling: app icon, SVG brand header, state/direction badges, SCSS.
+- Inbound poll imports only inbound messages (`incoming`/`entrante`).
+
+Generic AS2 file transport backed by the AS2Expert REST API: accounts,
+partner sync, outbound send, and inbound via public webhook plus a 5-minute
+polling fallback. No AS2 crypto in Odoo.

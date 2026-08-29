@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_as2expert_root" name="AS2Expert" sequence="90"
+              web_icon="as2expert_connector,static/description/icon.png"/>
+
+    <menuitem id="menu_as2expert_messages" name="Messages"
+              parent="menu_as2expert_root"
+              action="action_as2expert_message" sequence="10"/>
+
+    <menuitem id="menu_as2expert_partners" name="Partners"
+              parent="menu_as2expert_root"
+              action="action_as2expert_partner" sequence="20"/>
+
+    <menuitem id="menu_as2expert_config" name="Configuration"
+              parent="menu_as2expert_root" sequence="90"
+              groups="as2expert_connector.group_as2expert_manager"/>
+
+    <menuitem id="menu_as2expert_accounts" name="Accounts"
+              parent="menu_as2expert_config"
+              action="action_as2expert_account" sequence="10"/>
+</odoo>
