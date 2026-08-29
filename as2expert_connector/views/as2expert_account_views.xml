@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_as2expert_account_form" model="ir.ui.view">
+        <field name="name">as2expert.account.form</field>
+        <field name="model">as2expert.account</field>
+        <field name="arch" type="xml">
+            <form class="o_as2expert_form">
+                <header>
+                    <button name="action_test_connection" type="object"
+                            string="Test connection" class="btn-primary"/>
+                    <button name="action_sync_partners" type="object"
+                            string="Sync partners"/>
+                    <button name="poll_inbound" type="object"
+                            string="Poll inbound now"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_messages" type="object"
+                                class="oe_stat_button" icon="fa-envelope">
+                            <field name="message_count" widget="statinfo" string="Messages"/>
+                        </button>
+                        <button class="oe_stat_button" icon="fa-handshake-o" disabled="1">
+                            <field name="partner_count" widget="statinfo" string="Partners"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <div class="o_as2expert_header">
+                        <img class="o_as2expert_logo"
+                             src="/as2expert_connector/static/src/img/as2_logo.svg"
+                             alt="AS2Expert"/>
+                        <div class="o_as2expert_brand">
+                            <span class="o_as2expert_name">AS2Expert account</span>
+                            <span class="o_as2expert_tag">Managed AS2 mailbox</span>
+                        </div>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g. Production AS2"/></h1>
+                    </div>
+                    <group>
+                        <group string="API">
+                            <field name="base_url"/>
+                            <field name="token" password="True"/>
+                            <field name="timeout"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                        <group string="Polling">
+                            <field name="station_ref"/>
+                            <field name="inbound_folder"/>
+                            <field name="poll_limit"/>
+                        </group>
+                    </group>
+                    <group string="Webhook" class="o_as2expert_webhook">
+                        <field name="webhook_url" readonly="1"/>
+                        <field name="webhook_secret" password="True"/>
+                        <button name="action_regenerate_webhook_token" type="object"
+                                string="Regenerate webhook URL" class="btn-link"/>
+                        <div colspan="2" class="text-muted">
+                            Register the webhook URL above against your partner in the
+                            AS2Expert console. Inbound messages are also picked up by a
+                            scheduled poll, so the webhook is an accelerator, not a
+                            single point of failure.
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_as2expert_account_tree" model="ir.ui.view">
+        <field name="name">as2expert.account.tree</field>
+        <field name="model">as2expert.account</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="base_url"/>
+                <field name="station_ref"/>
+                <field name="message_count"/>
+                <field name="partner_count"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_as2expert_account" model="ir.actions.act_window">
+        <field name="name">AS2Expert Accounts</field>
+        <field name="res_model">as2expert.account</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
